@@ -3,33 +3,35 @@ package com.effm00.state.states;
 import com.effm00.state.State;
 import com.effm00.state.Tamagotchi;
 
-public class Boring implements State {
+public class Hungry implements State {
 
     private Tamagotchi tamagotchi;
 
     @Override
     public void play() {
-        System.out.println("Let's play!!");
-        tamagotchi.setState(new Tired());
+        System.out.println("I don't want to play. I want some food!");
     }
 
     @Override
     public void eat() {
-        System.out.println("I don't want to eat!! I'm boring");
+        System.out.println("So delicious!!");
+        tamagotchi.setState(new Tired());
     }
 
     @Override
     public void sleep() {
-        System.out.println("I don't want to sleep!! I want to play");
+        System.out.println("I don't need to sleep, I need food!!!");
     }
 
     @Override
     public void sayHowAreIt() {
-        System.out.println("I'm boring. I want to play!!");
+        System.out.println("I'm very hungry and I want food!!!");
     }
 
     @Override
     public void setTamagochi(Tamagotchi tamagotchi) {
         this.tamagotchi = tamagotchi;
     }
+
+
 }

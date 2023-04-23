@@ -14,4 +14,20 @@ public class Tamagotchi {
         this.state = state;
         this.state.setTamagochi(this);
     }
+
+    public void feed() {
+        this.state.eat();
+    }
+
+    public void sleep(){
+        this.state.sleep();
+    }
+
+    public void play() {
+        this.state.play();
+    }
+
+    public void say() {
+        this.state.sayHowAreIt();
+    }
 }
